@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Sistema de Agendamento-CEUMA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sticky-footer.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Imagem e texto -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="img/download.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Universidade CEUMA
+  </a>
+</nav>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">Sistema de Agendamento</h1>
+      <div class="container">
+	  <div class="row">
+	  <input type="date" name="data-lab" id="data-lab">
+    <button type="submit" class="btn btn-primary" id="data-buton">Pesquisar</button>
+	  <!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+  Agendar Horário
+</button>
+	  </div>
+      </div>
+	 
+
+<!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar Horário</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  <form>
+	  <h6>Data</h6>
+        <input type="date" id="data">
+		<h6>Horario</h6>
+		    <input type="time" id="horarioInicio">
+		 <label> a </label>
+		    <input type="time" id="horarioFim">
+		<div class="form-group">
+    <label for="curso" >Nome</label>
+    <textarea class="form-control" id="nome" rows="1"></textarea>
+	    <label for="curso" >Curso</label>
+    <textarea class="form-control" id="curso" rows="1"></textarea>
+	    <label for="usoLab" >Qual o uso do Laboratório?</label>
+    <textarea class="form-control" rows="3" id="usoLab"></textarea>
+	<div class="form-group">
+    <label for="labNum">Laboratório</label>
+    <select class="form-control" id="labNum">
+        <option>Laboratório 1</option>
+        <option>Laboratório 2</option>
+        <option>Laboratório 3</option>
+        <option>Laboratório 4</option>
+        <option>Laboratório 5</option>
+        <option>Laboratório 6</option>
+    </select>
+  </div>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" nome="salvar-mud" id="salvar-mud">Salvar mudanças</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	  
+	<div class="accordion" id="accordionExample">
+  <form>
+    
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Laboratório de Informática 1
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Laboratório de Informática 2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Laboratório de Informática 3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Laboratório de Informática 4
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Laboratório de Informática 5
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Laboratório de Informática 6
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+        texto aqui
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+	
+	
+	
+	
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+	
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/collapse.js"></script>
+	
+	
+	<script src="js/popper.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/popover.js"></script>
+    <script src="js/actions.js"></script>
+	
+	
+  </body>
+</html>
