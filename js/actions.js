@@ -45,7 +45,7 @@ salvar.onclick = function (event) {
 	})
 }
 
- var url = 'http://localhost/read/' + data.value
+ var url = 'http://localhost:8080/read' + data.value
  axios.get(url)
 
 search.onclick = function (event){
